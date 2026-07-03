@@ -19,6 +19,7 @@ function figmaAssetResolver() {
 export default defineConfig({
   server: {
     port: 3015,
+    host: true,
   },
   plugins: [
     figmaAssetResolver(),

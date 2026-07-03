@@ -7,12 +7,12 @@ services:
       dockerfile: Dockerfile
     container_name: vero-frontend
     ports:
-      - "80:80"
+      - "3015:3015"
     depends_on:
       - backend
     restart: always
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
 
   backend:
     # This is a placeholder for your actual backend API/Socket server
