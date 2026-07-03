@@ -20,6 +20,7 @@ export default defineConfig({
   server: {
     port: 3015,
     host: true,
+    allowedHosts: ["nafis-server.tail634f34.ts.net"],
   },
   plugins: [
     figmaAssetResolver(),
