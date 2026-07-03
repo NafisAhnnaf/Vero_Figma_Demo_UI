@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vero-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
+    environment:
+      - NODE_ENV=production
+
+  backend:
+    # This is a placeholder for your actual backend API/Socket server
+    # You can replace the image with your own build context later!
+    image: node:20-alpine
+    container_name: vero-backend
+    working_dir: /app
+    command: >
+      sh -c "echo 'Backend Placeholder Running' && tail -f /dev/null"
+    # If building from a separate folder, use:
+    # build:
+    #   context: ../backend
+    #   dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: always
