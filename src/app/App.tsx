@@ -14,7 +14,7 @@ import { ThemeProvider } from '../context/ThemeContext';
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/figma-demo">
         <Routes>
           <Route path="/signin" element={<SignIn />} />
           

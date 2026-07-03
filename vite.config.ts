@@ -17,6 +17,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  base: '/figma-demo/',
   server: {
     port: 3015,
     host: true,
